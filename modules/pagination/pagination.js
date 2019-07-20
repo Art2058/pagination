@@ -63,14 +63,14 @@ class Pagination {
     onSelectLimit = this.onSelectLimit,
     onPage = this.onPage
   }) {
-    this.selector = selector,
-    this.pageLimitShow = pageLimitShow,
-    this.limits = limits,
+    this.selector = selector
+    this.pageLimitShow = pageLimitShow
+    this.limits = limits
     this.limit = limits[0]
-    this.page = page,
-    this.totalCount = totalCount,
-    this.pagesToShow = pagesToShow,
-    this.onSelectLimit = onSelectLimit,
+    this.page = page
+    this.totalCount = totalCount
+    this.pagesToShow = pagesToShow
+    this.onSelectLimit = onSelectLimit
     this.onPage = onPage
 
     this.init()
