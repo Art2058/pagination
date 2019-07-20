@@ -1,0 +1,97 @@
+$baseFontSize: 16;
+$grey1: #d1d2d4;
+$grey2: #bdbfc1;
+$grey3: #4e4e4e;
+$dark: #262626;
+
+@function rem($pixels, $context: $baseFontSize) {
+	@if (unitless($pixels)) {
+		$pixels: $pixels * 1px;
+	}
+
+	@if (unitless($context)) {
+		$context: $context * 1px;
+	}
+
+	@return $pixels / $context * 1rem;
+}
+
+%flex-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+button {
+	cursor: pointer;
+	border: none;
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: space-between;
+
+  .page-limit {
+    button {
+      padding: rem(5) rem(12);
+      margin-right: rem(2);
+      font-size: rem(14);
+      color: white;
+      background-color: $grey1;
+      &.selected {
+        background-color: $grey3;
+      }
+      &:disabled {
+        cursor: auto;
+      }
+    }
+  }
+
+  .paginate {
+    display: flex;
+    button {
+      @extend %flex-center;
+      min-width: rem(28);
+      height: rem(28);
+      margin-left: rem(6);
+      font-size: rem(14);
+      color: $grey2;
+      background-color: white;
+      border: rem(1) solid $grey1;
+      outline: none;
+      &.active {
+        border-color: $dark;
+        color: $dark;
+        cursor: auto;
+      }
+      &.jump-prev,
+      &.jump-next {
+        @extend %flex-center;
+        span {
+          display: inline-block;
+          width: rem(2);
+          height: rem(2);
+          margin: rem(1);
+          border-radius: 50%;
+          background-color: $grey2;
+        }
+      }
+      &.disabled {
+        display: none;
+      }
+      &.prev,
+      &.next {
+        font-size: rem(23);
+      }
+    }
+    button:disabled {
+      color: $dark !important;
+      background-color: white !important;
+    }
+    p {
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}

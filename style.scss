@@ -1,0 +1,18 @@
+.app-container {
+  margin: 20px;
+  header {
+    margin-bottom: 20px;
+  }
+  section {
+    margin-bottom: 20px;
+    .list {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      img {
+        max-width: 50px;
+        padding: 8;
+      }
+    }
+  }
+}
