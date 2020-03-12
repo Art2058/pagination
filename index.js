@@ -39,12 +39,12 @@ getList(1, pagination.limit, true) // 첫 리스트 가져오기
 // ajax polyfill
 function ajax(url) {
   return new Promise((resolve, reject) => {
-    var request = new XMLHttpRequest()
+    const request = new XMLHttpRequest()
     request.open('GET', url, true)
 
     request.onload = function() {
       if (request.status >= 200 && request.status < 400) {
-        var data = JSON.parse(request.responseText);
+        const data = JSON.parse(request.responseText);
         resolve(data)
       }
       else {
