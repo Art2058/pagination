@@ -33,7 +33,7 @@ button {
 
   .page-limit {
     button {
-      padding: rem(5) rem(12);
+      padding: rem(6) rem(12);
       margin-right: rem(2);
       font-size: rem(14);
       color: white;
@@ -57,7 +57,7 @@ button {
       font-size: rem(14);
       color: $grey2;
       background-color: white;
-      border: rem(1) solid $grey1;
+      border: 1px solid $grey1;
       outline: none;
       &.active {
         border-color: $dark;
@@ -71,7 +71,7 @@ button {
           display: inline-block;
           width: rem(2);
           height: rem(2);
-          margin: rem(1);
+          margin: 1px;
           border-radius: 50%;
           background-color: $grey2;
         }
@@ -81,7 +81,7 @@ button {
       }
       &.prev,
       &.next {
-        font-size: rem(23);
+        font-size: rem(24);
       }
     }
     button:disabled {
