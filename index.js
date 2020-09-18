@@ -1,5 +1,5 @@
 import './style.scss'
-import Pagination from './modules/pagination' // pagination import
+import Pagination from './modules/pagination/pagination' // pagination import
 
 // 페이지네이션 생성
 const pagination = new Pagination({
